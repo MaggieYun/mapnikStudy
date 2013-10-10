@@ -1,0 +1,18 @@
+<Map background-color="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+
+  <Style name="My Style">
+    <Rule>
+    	<PointSymbolizer file="../point.png" width="8" height="8" type="png" /> 
+    </Rule>
+  </Style>
+
+  <Layer name="My Layer" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>My Style</StyleName>
+    <Datasource>
+      <Parameter name="type">ogr</Parameter>
+      <Parameter name="file">..\data.geojson</Parameter>
+      <Parameter name="layer">OGRGeoJSON</Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
